@@ -1,0 +1,181 @@
+.demo-header {
+    background-color: var(--color-background);
+}
+
+.carousel-color {
+    height: 32rem;
+}
+
+.carousel-wrapper {
+    width: min(calc(100% - 2rem), 75rem);
+    margin: 2rem auto;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 12px 28px rgba(14, 17, 23, 0.22);
+}
+
+.section-container {
+    width: min(calc(100% - 2rem), 75rem);
+    max-width: none;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+}
+
+.palette-content {
+    max-width: 42rem;
+}
+
+.palette-content h2 {
+    font-size: clamp(2rem, 5vw, 4rem);
+    font-weight: 700;
+}
+
+.palette-content .hex {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.ui-eyebrow,
+.object-label,
+.card-kicker {
+    color: var(--color-primary);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.ui-title {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.ui-preview {
+    --color-primary: #73FBD3;
+    --color-background: #0E1117;
+    --color-surface: #1A1F2E;
+    --color-text: #F0F4FF;
+    --color-cta: #3D5AFE;
+    overflow: hidden;
+    border: 1px solid rgba(115, 251, 211, 0.2);
+    border-radius: 8px;
+    background-color: var(--color-surface);
+    color: var(--color-text);
+}
+
+.demo-header {
+    border-bottom: 1px solid rgba(240, 244, 255, 0.12);
+}
+
+.demo-header .navbar-brand {
+    color: var(--color-text);
+}
+
+.demo-header .navbar-brand span {
+    color: var(--color-primary);
+}
+
+.demo-header .nav-link {
+    color: rgba(240, 244, 255, 0.72);
+}
+
+.demo-header .nav-link.active,
+.demo-header .nav-link:hover {
+    color: var(--color-primary);
+}
+
+.object-title {
+    margin-bottom: 1rem;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.05;
+}
+
+.object-copy {
+    max-width: 28rem;
+    color: rgba(240, 244, 255, 0.72);
+    line-height: 1.7;
+}
+
+.demo-cta {
+    border-color: var(--color-cta);
+    background-color: var(--color-cta);
+    color: var(--color-text);
+    font-weight: 600;
+}
+
+.demo-cta:hover,
+.demo-cta:focus-visible {
+    border-color: var(--color-primary);
+    background-color: var(--color-primary);
+    color: var(--color-background);
+}
+
+.object-price {
+    color: var(--color-text);
+    font-weight: 600;
+}
+
+.object-card {
+    overflow: hidden;
+    border: 1px solid rgba(240, 244, 255, 0.1);
+    border-radius: 8px;
+    background-color: var(--color-background);
+    color: var(--color-text);
+}
+
+.object-art {
+    min-height: 18rem;
+    background-color: var(--color-primary);
+}
+
+.object-card .card-body {
+    gap: 1rem;
+}
+
+.object-card .card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.availability {
+    color: rgba(240, 244, 255, 0.72);
+    font-size: 0.8rem;
+    white-space: nowrap;
+}
+
+.availability span {
+    display: inline-block;
+    width: 0.5rem;
+    height: 0.5rem;
+    margin-right: 0.35rem;
+    border-radius: 50%;
+    background-color: var(--color-primary);
+}
+
+@media (max-width: 575.98px) {
+    .object-title {
+        font-size: 2.5rem;
+    }
+
+    .demo-header .navbar-nav {
+        gap: 0.5rem !important;
+    }
+
+    .demo-header .nav-link {
+        padding-right: 0.25rem;
+        padding-left: 0.25rem;
+        font-size: 0.875rem;
+    }
+
+    .object-art {
+        min-height: 15rem;
+    }
+
+    .headphone-band {
+        top: 3rem;
+    }
+
+    .headphone-cup {
+        top: 8.9rem;
+    }
+}
