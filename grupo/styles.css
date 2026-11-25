@@ -1,0 +1,179 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #252525;
+    background: #f5f5f5;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: #252525;
+}
+
+.nav-container {
+    max-width: 1100px;
+    height: 64px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo,
+.enlaces a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.logo {
+    display: block;
+    font-weight: bold;
+}
+
+.enlaces {
+    display: flex;
+    gap: 24px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.enlaces a {
+    display: block;
+    padding: 22px 0;
+}
+
+.enlaces a:hover,
+.enlaces a:focus {
+    color: #f0a27f;
+}
+
+.sobre-nosotros,
+.page-section {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 64px 24px;
+    text-align: center;
+    scroll-margin-top: 64px;
+}
+
+.sobre-nosotros h1 {
+    margin: 0 0 16px;
+    font-size: 42px;
+}
+
+#nosotros {
+    margin: 0 0 16px;
+    font-size: 42px;
+}
+
+.subtitulo {
+    max-width: 680px;
+    margin: 0 auto 40px;
+    color: #666;
+    line-height: 1.6;
+}
+
+.team {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.miembros,
+.miembro {
+    padding: 24px 16px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.angel,
+.juan,
+.fran,
+.laine {
+    display: grid;
+    width: 160px;
+    height: 160px;
+    margin: 0 auto 20px;
+    place-items: center;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 38px;
+    font-weight: bold;
+}
+
+.angel {
+    background: #e66f51;
+}
+
+.juan {
+    background: #4e73a7;
+}
+
+.fran {
+    background: #6a9c78;
+}
+
+.laine {
+    background: #8067a7;
+}
+
+.miembros h2,
+.miembro h2 {
+    margin: 0 0 8px;
+    font-size: 20px;
+}
+
+.role,
+.estudios {
+    margin: 0;
+    color: #777;
+}
+
+@media (max-width: 800px) {
+    .team {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-container {
+        height: auto;
+        min-height: 64px;
+        flex-direction: column;
+        justify-content: center;
+        gap: 4px;
+        padding: 8px 16px;
+    }
+
+    .enlaces {
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .enlaces a {
+        padding: 8px 0;
+        font-size: 14px;
+    }
+
+    .team {
+        grid-template-columns: 1fr;
+    }
+
+    .sobre-nosotros h1 {
+        font-size: 34px;
+    }
+}
