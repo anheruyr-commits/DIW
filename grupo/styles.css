@@ -69,12 +69,12 @@ html {
 }
 
 .sobre-nosotros h1 {
-    margin: 0 0 16px;
+    margin: 0 0 0;
     font-size: 42px;
 }
 
 #nosotros {
-    margin: 0 0 16px;
+    margin: 0 0 0;
     font-size: 42px;
 }
 
@@ -132,7 +132,7 @@ html {
 
 .miembros h2,
 .miembro h2 {
-    margin: 0 0 8px;
+    margin: 0 0 0;
     font-size: 20px;
 }
 
@@ -142,38 +142,88 @@ html {
     color: #777;
 }
 
-@media (max-width: 800px) {
-    .team {
-        grid-template-columns: repeat(2, 1fr);
-    }
+#proyectos {
+    text-align: left;
 }
 
-@media (max-width: 480px) {
-    .nav-container {
-        height: auto;
-        min-height: 64px;
-        flex-direction: column;
-        justify-content: center;
-        gap: 4px;
-        padding: 8px 16px;
-    }
+#proyectos #projects-title {
+    margin: 0 0 16px;
+    text-align: center;
+    font-size: 42px;
+}
 
-    .enlaces {
-        gap: 12px;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
+.proyecto {
+    display: grid;
+    grid-template-columns: minmax(220px, 0.8fr) minmax(300px, 1.2fr);
+    align-items: center;
+    gap: 48px;
+    margin-top: 32px;
+}
 
-    .enlaces a {
-        padding: 8px 0;
-        font-size: 14px;
-    }
+.proyecto-izquierda {
+    grid-template-areas: "imagen contenido";
+}
 
-    .team {
-        grid-template-columns: 1fr;
-    }
+.proyecto-derecha {
+    grid-template-areas: "contenido imagen";
+}
 
-    .sobre-nosotros h1 {
-        font-size: 34px;
-    }
+.proyecto img {
+    width: 100%;
+    max-height: 420px;
+    object-fit: cover;
+    border-radius: 16px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.14);
+}
+
+.proyecto-izquierda img,
+.proyecto-derecha img {
+    grid-area: imagen;
+}
+
+.proyecto-contenido {
+    grid-area: contenido;
+}
+
+.proyecto-contenido h3 {
+    margin: 0 0 12px;
+    font-size: 28px;
+    color: #252525;
+}
+
+.proyecto-contenido p {
+    margin: 0 0 16px;
+    color: #666;
+    line-height: 1.75;
+}
+
+.proyecto-contenido p:last-child {
+    margin-bottom: 0;
+}
+
+.web-neco {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 24px;
+    padding: 12px 22px;
+    border: 0;
+    border-radius: 8px;
+    background: #1457e6;
+    color: #fff;
+    font: inherit;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background-color 160ms ease, transform 160ms ease, box-shadow 160ms ease;
+}
+
+.web-neco:hover {
+    transform: translateY(-2px);
+    background: #0e45bd;
+    box-shadow: 0 6px 16px rgba(20, 87, 230, 0.25);
+}
+
+.web-neco:focus-visible {
+    outline: 3px solid #252525;
+    outline-offset: 3px;
 }
