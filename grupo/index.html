@@ -28,37 +28,68 @@
                 experiencias digitales útiles y atractivas.</p>
 
             <div class="team">
-                <article class="miembros">
-                    <div class="angel" role="img"></div>
-                    <h2>Ángel López</h2>
-                    <p class="role">Desarrollo de aplicaciones web</p>
-                    <p class="bio">Enfocado en arquitectura backend, bases de datos y automatización de procesos para
-                        negocios digitales.</p>
+                <!-- FLIP (Claude): cada tarjeta se divide en cara delantera (frente) y trasera (dorso).
+                     tabindex="0" permite girarla también con el teclado (tecla Tab). -->
+                <article class="miembros" tabindex="0">
+                    <div class="tarjeta-giro"> <!-- FLIP: contenedor que gira -->
+                        <div class="tarjeta-frente"> <!-- FLIP: cara delantera -->
+                            <div class="angel" role="img"></div>
+                            <h2>Ángel López</h2>
+                            <p class="role">Desarrollo de aplicaciones web</p>
+                        </div>
+                        <div class="tarjeta-dorso dorso-angel"> <!-- FLIP: cara trasera -->
+                            <h2>Ángel López</h2>
+                            <p class="bio">Enfocado en arquitectura backend, bases de datos y automatización de procesos para
+                                negocios digitales.</p>
+                        </div>
+                    </div>
                 </article>
 
-                <article class="miembros">
-                    <div class="juan" role="img"></div>
-                    <h2>Juan Noregol</h2>
-                    <p class="role">Desarrollo de aplicaciones web</p>
-                    <p class="bio">Enfocado en arquitectura backend, bases de datos y automatización de procesos para
-                        negocios digitales.</p>
+                <article class="miembros" tabindex="0">
+                    <div class="tarjeta-giro"> <!-- FLIP -->
+                        <div class="tarjeta-frente"> <!-- FLIP -->
+                            <div class="juan" role="img"></div>
+                            <h2>Juan Noregol</h2>
+                            <p class="role">Desarrollo de aplicaciones web</p>
+                        </div>
+                        <div class="tarjeta-dorso dorso-juan"> <!-- FLIP -->
+                            <h2>Juan Noregol</h2>
+                            <p class="bio">Enfocado en arquitectura backend, bases de datos y automatización de procesos para
+                                negocios digitales.</p>
+                        </div>
+                    </div>
                 </article>
 
-                <article class="miembro">
-                    <div class="fran" role="img"></div>
-                    <h2>Fran García</h2>
-                    <p class="role">Desarrollo de aplicaciones web</p>
-                    <p class="bio">Enfocado en arquitectura backend, bases de datos y automatización de procesos para
-                        negocios digitales.</p>
+                <article class="miembro" tabindex="0">
+                    <div class="tarjeta-giro"> <!-- FLIP -->
+                        <div class="tarjeta-frente"> <!-- FLIP -->
+                            <div class="fran" role="img"></div>
+                            <h2>Fran García</h2>
+                            <p class="role">Desarrollo de aplicaciones web</p>
+                        </div>
+                        <div class="tarjeta-dorso dorso-fran"> <!-- FLIP -->
+                            <h2>Fran García</h2>
+                            <p class="bio">Enfocado en arquitectura backend, bases de datos y automatización de procesos para
+                                negocios digitales.</p>
+                        </div>
+                    </div>
                 </article>
 
-                <article class="miembro">
-                    <div class="laine" role="img"></div>
-                    <h2>Javier Lainez</h2>
-                    <p class="role">Desarrollo de aplicaciones web</p>
-                    <p class="bio">Enfocado en arquitectura backend, bases de datos y automatización de procesos para
-                        negocios digitales.</p>
+                <article class="miembro" tabindex="0">
+                    <div class="tarjeta-giro"> <!-- FLIP -->
+                        <div class="tarjeta-frente"> <!-- FLIP -->
+                            <div class="laine" role="img"></div>
+                            <h2>Javier Lainez</h2>
+                            <p class="role">Desarrollo de aplicaciones web</p>
+                        </div>
+                        <div class="tarjeta-dorso dorso-laine"> <!-- FLIP -->
+                            <h2>Javier Lainez</h2>
+                            <p class="bio">Enfocado en arquitectura backend, bases de datos y automatización de procesos para
+                                negocios digitales.</p>
+                        </div>
+                    </div>
                 </article>
+                <!-- FIN FLIP (Claude) -->
             </div>
         </section>
 
@@ -121,6 +152,39 @@
                     <a class="boton-proyecto" href="https://jaranastudio.es/">Visitar web</a>
                 </div>
                 <img src="img/jaranastudio.es_ (2).png" alt="Vista del proyecto NECO">
+            </article>
+
+            <br>
+            <br>
+            <br>
+
+            <article class="proyecto proyecto-izquierda">
+                <img src="img/nexia.png" alt="Página principal de Nexia">
+                <div class="proyecto-contenido">
+                    <h3>NEXIA</h3>
+                    <p class="p-proyecto">Nexia es una recepcionista con inteligencia artificial pensada para negocios que trabajan con
+                        citas, como barberías, centros de estética, fisioterapia, academias o asesorías. Atiende a los
+                        clientes por WhatsApp e Instagram y reserva, cambia o cancela citas directamente en la agenda
+                        real del negocio.</p>
+                    <p class="p-proyecto">Además de la recepcionista, incluye un panel de gestión con agenda, clientes, cobros,
+                        productos, gastos y estadísticas, y un módulo de eventos con venta de entradas y control de
+                        acceso mediante código QR.</p>
+                </div>
+            </article>
+
+            <article class="proyecto proyecto-derecha">
+                <div class="proyecto-contenido">
+                    <h3>Web Nexia</h3>
+                    <p class="p-proyecto">La web presenta el producto de forma clara: cómo funciona, canales de atención, agenda,
+                        servicios, planes, preguntas frecuentes y privacidad, con un formulario para solicitar una demo.
+                        La atención por mensajería se conecta mediante las APIs oficiales de Meta para WhatsApp e
+                        Instagram.</p>
+                    <p class="p-proyecto">El objetivo es que las pequeñas empresas ahorren tiempo automatizando la atención al
+                        cliente y la gestión de citas. Funciona por invitación con planes Básico y Pro, y el plan
+                        Premium llegará próximamente.</p>
+                    <a class="boton-proyecto" href="https://www.hellonexia.es/">Visitar web</a>
+                </div>
+                <img src="img/nexia2.png" alt="Vista de la web de Nexia">
             </article>
 
 
