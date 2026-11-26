@@ -5,13 +5,6 @@
     font-style: normal;
 }
 
-@font-face {
-    font-family: 'Oswald';
-    src: url('assets/Oswald-Medium.ttf') format('truetype');
-    font-weight: 500;
-    font-style: normal;
-}
-
 .p-proyecto {
     text-align: justify;
 }
@@ -578,4 +571,33 @@ margin: 4px 0 12px;
         height: 120px;
         margin-bottom: 16px;
     }
+}
+
+/* ===== CABECERA ===== */
+/* El nav va dentro de <header>: la cabecera es la que se queda fija arriba */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+/* ===== SELECTORES DE ATRIBUTO ===== */
+/* Enlaces que se abren en otra pestaña: flecha para avisar al usuario */
+a[target="_blank"]::after {
+    content: " \2197";
+}
+
+/* Enlaces de correo: icono de sobre delante */
+a[href^="mailto:"]::before {
+    content: "\2709  ";
+}
+
+/* Enlaces externos (https) del footer: subrayado al pasar el ratón */
+.footer a[href^="https"]:hover {
+    text-decoration: underline;
+}
+
+/* Campo de correo del formulario: siempre en minúsculas */
+input[type="email"] {
+    text-transform: lowercase;
 }
