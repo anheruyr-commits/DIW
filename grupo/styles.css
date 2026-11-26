@@ -12,6 +12,10 @@
     font-style: normal;
 }
 
+.p-proyecto {
+    text-align: justify;
+}
+
 
 * {
     box-sizing: border-box;
@@ -72,7 +76,7 @@ html {
 
 .enlaces a:hover,
 .enlaces a:focus {
-    color: #f0a27f;
+    color: #d4d4d4;
 }
 
 
