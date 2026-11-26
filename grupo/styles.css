@@ -1,3 +1,18 @@
+@font-face {
+    font-family: 'Anton';
+    src: url('assets/Anton-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Oswald';
+    src: url('assets/Oswald-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+
 * {
     box-sizing: border-box;
 }
@@ -18,6 +33,7 @@ html {
     top: 0;
     z-index: 10;
     background: #252525;
+
 }
 
 .nav-container {
@@ -27,7 +43,7 @@ html {
     padding: 0 24px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .logo,
@@ -59,6 +75,8 @@ html {
     color: #f0a27f;
 }
 
+
+
 .sobre-nosotros,
 .page-section {
     max-width: 1100px;
@@ -66,19 +84,22 @@ html {
     padding: 64px 24px;
     text-align: center;
     scroll-margin-top: 64px;
+    
+
 }
 
-.sobre-nosotros h1 {
-    margin: 0 0 0;
-    font-size: 42px;
-}
-
+h1,
+.sobre-nosotros h1,
 #nosotros {
+    font-family: 'Anton', Impact, sans-serif;
     margin: 0 0 0;
     font-size: 42px;
 }
+
+
 
 .subtitulo {
+    
     max-width: 680px;
     margin: 0 auto 40px;
     color: #666;
@@ -93,7 +114,10 @@ html {
 
 .miembros,
 .miembro {
-    padding: 24px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px 18px;
     background: #fff;
     border-radius: 12px;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
@@ -132,15 +156,27 @@ html {
 
 .miembros h2,
 .miembro h2 {
+    
     margin: 0 0 0;
     font-size: 20px;
 }
 
 .role,
 .estudios {
-    margin: 0;
+margin: 4px 0 12px;
     color: #777;
+    font-size: 14px;
+    font-weight: bold;
 }
+
+.bio {
+    margin: 0 0 16px;
+    color: #555;
+    font-size: 14px;
+    line-height: 1.55;
+}
+
+
 
 #proyectos {
     text-align: left;
@@ -154,7 +190,7 @@ html {
 
 .proyecto {
     display: grid;
-    grid-template-columns: minmax(220px, 0.8fr) minmax(300px, 1.2fr);
+    grid-template-columns: 1fr 1fr;
     align-items: center;
     gap: 48px;
     margin-top: 32px;
@@ -170,9 +206,11 @@ html {
 
 .proyecto img {
     width: 100%;
-    max-height: 420px;
-    object-fit: cover;
-    border-radius: 16px;
+    height: auto;
+    aspect-ratio: 16 / 10;
+    object-fit: contain;
+    background: #fff;
+    border-radius: 5px;
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.14);
 }
 
@@ -183,9 +221,14 @@ html {
 
 .proyecto-contenido {
     grid-area: contenido;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .proyecto-contenido h3 {
+    font-family: 'anton', sans-serif;
+    font-weight: 600;
     margin: 0 0 12px;
     font-size: 28px;
     color: #252525;
@@ -201,7 +244,7 @@ html {
     margin-bottom: 0;
 }
 
-.web-neco {
+.boton-proyecto {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -217,13 +260,67 @@ html {
     transition: background-color 160ms ease, transform 160ms ease, box-shadow 160ms ease;
 }
 
-.web-neco:hover {
+.boton-proyecto:hover {
     transform: translateY(-2px);
     background: #0e45bd;
     box-shadow: 0 6px 16px rgba(20, 87, 230, 0.25);
 }
 
-.web-neco:focus-visible {
+.boton-proyecto:focus-visible {
     outline: 3px solid #252525;
     outline-offset: 3px;
+}
+
+.proyectos2 {
+    background-color: #e9e9e9;
+}
+
+@media (max-width: 900px) {
+    .team {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .proyecto {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .proyecto-izquierda,
+    .proyecto-derecha {
+        grid-template-areas:
+            "imagen"
+            "contenido";
+    }
+
+    .sobre-nosotros {
+        padding: 48px 16px;
+    }
+
+    #nosotros {
+        font-size: 32px;
+    }
+
+    .subtitulo {
+        margin-bottom: 28px;
+        font-size: 15px;
+    }
+
+    .team {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .angel,
+    .juan,
+    .fran,
+    .laine {
+        width: 120px;
+        height: 120px;
+        margin-bottom: 16px;
+        font-size: 28px;
+    }
+
 }
