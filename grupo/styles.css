@@ -12,6 +12,10 @@
     font-style: normal;
 }
 
+.p-proyecto {
+    text-align: justify;
+}
+
 
 * {
     box-sizing: border-box;
